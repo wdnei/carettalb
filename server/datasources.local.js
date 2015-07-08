@@ -1,0 +1,24 @@
+
+module.exports = {
+  "db": {
+    "name": "db",
+    "connector": "memory",
+    "file": "db.json"
+  },
+  "mySQL": {
+    "host": "127.0.0.1",
+    "port": 3307,
+    "url": "http://127.0.0.1:3307",
+    "database": "caretta",
+    "password": "usbw",
+    "name": "mySQL",
+    "connector": "mysql",
+    "user": "root"
+  },
+  "storage": {
+    "name": "storage",
+    "connector": "loopback-component-storage",
+    "provider": "filesystem",
+    "root":process.env.OPENSHIFT_DATA_DIR || "./server/storage"
+  }
+}
