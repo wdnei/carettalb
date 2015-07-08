@@ -23,6 +23,8 @@ angular.module('app', ['angularFileUpload'])
 
     uploader.filters.push(function (item) { // second user filter
       console.info('filter2');
+	  console.info('PROCESS:');
+	  console.log(process.env);
       return true;
     });
 
