@@ -1,0 +1,41 @@
+{
+  "name": "complaint",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "comment": {
+      "type": "string"
+    },
+    "id": {
+      "type": "number",
+      "id": true
+    },
+    "datetime": {
+      "type": "string",
+      "required": true
+    },
+    "location": {
+      "type": "geopoint",
+      "required": true
+    },
+    "userId": {
+      "type": "number",
+      "required": true
+    },
+    "userName": {
+      "type": "string",
+      "required": true
+    },
+    "imgUrl": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": []
+}

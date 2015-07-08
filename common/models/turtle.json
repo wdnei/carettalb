@@ -1,0 +1,52 @@
+{
+  "name": "turtle",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "comment": {
+      "type": "string",
+      "required": false
+    },
+    "datetime": {
+      "type": "string",
+      "required": true
+    },
+    "location": {
+      "type": "geopoint",
+      "required": true
+    },
+    "specieId": {
+      "type": "number",
+      "required": true
+    },
+    "specie": {
+      "type": "string",
+      "required": true
+    },
+    "userId": {
+      "type": "number",
+      "required": true
+    },
+    "userName": {
+      "type": "string",
+      "required": true
+    },
+    "id": {
+      "type": "number",
+      "id": true,
+      "required": true
+    },
+    "imgUrl": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": []
+}
