@@ -1,4 +1,6 @@
 
+
+
 module.exports = {
   "db": {
     "name": "db",
@@ -6,14 +8,14 @@ module.exports = {
     "file": "db.json"
   },
   "mySQL": {
-    "host": "127.0.0.1",
-    "port": 3307,
-    "url": "http://127.0.0.1:3307",
+    "host":process.env.OPENSHIFT_MYSQL_DB_HOST || "127.0.0.1",
+    "port":process.env.OPENSHIFT_MYSQL_DB_PORT || 3307,
+    "url":process.env.OPENSHIFT_MYSQL_DB_URL || "http://127.0.0.1:3307",
     "database": "caretta",
-    "password": "usbw",
+    "password": process.env.OPENSHIFT_MYSQL_DB_PASSWORD || "usbw",
     "name": "mySQL",
     "connector": "mysql",
-    "user": "root"
+    "user":process.env.OPENSHIFT_MYSQL_DB_USERNAME || "root"
   },
   "storage": {
     "name": "storage",
