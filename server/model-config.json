@@ -21,7 +21,7 @@
     "public": false
   },
   "ACL": {
-    "dataSource": "db",
+    "dataSource": "mySQL",
     "public": false
   },
   "RoleMapping": {
@@ -32,19 +32,19 @@
     "dataSource": "mySQL",
     "public": false
   },
-  "complaint": {
+  "Complaint": {
     "dataSource": "mySQL",
     "public": true
   },
-  "nest": {
+  "Nest": {
     "dataSource": "mySQL",
     "public": true
   },
-  "turtle": {
+  "Turtle": {
     "dataSource": "mySQL",
     "public": true
   },
-  "container": {
+  "Container": {
     "dataSource": "storage",
     "public": true
   }

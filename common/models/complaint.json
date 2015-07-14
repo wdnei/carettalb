@@ -1,5 +1,5 @@
 {
-  "name": "complaint",
+  "name": "Complaint",
   "base": "PersistedModel",
   "strict": false,
   "idInjection": false,
@@ -14,16 +14,17 @@
       "type": "number",
       "id": true
     },
-    "datetime": {
-      "type": "string",
+    "when": {
+      "type": "date",
       "required": true
+    },
+    "addAt": {
+      "type": "date",
+      "required": false,
+      "defaultFn":"now"
     },
     "location": {
       "type": "geopoint",
-      "required": true
-    },
-    "userId": {
-      "type": "number",
       "required": true
     },
     "userName": {
@@ -35,7 +36,15 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+      "user": {
+      "type": "belongsTo",
+      "model": "User",
+      "foreignKey": ""
+    }
+      
+      
+  },
   "acls": [],
   "methods": []
 }

@@ -33,5 +33,24 @@ dataSource.automigrate('Role', function(err) {
   if (err) throw err;
 
   console.log('Role model migrated');
+  //dataSource.disconnect();
+});
+
+dataSource.automigrate('Nest', function(err) {
+  if (err) throw err;
+
+  console.log('Nest model migrated');
+  //dataSource.disconnect();
+});
+dataSource.automigrate('Complaint', function(err) {
+  if (err) throw err;
+
+  console.log('Complaint model migrated');
+  //dataSource.disconnect();
+});
+dataSource.automigrate('Turtle', function(err) {
+  if (err) throw err;
+
+  console.log('Turtle model migrated');
   dataSource.disconnect();
 });
