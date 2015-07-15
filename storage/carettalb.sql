@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.0.4.2
+-- version 4.0.10.10
 -- http://www.phpmyadmin.net
 --
--- Máquina: localhost
--- Data de Criação: 14-Jul-2015 às 00:24
--- Versão do servidor: 5.6.13
--- versão do PHP: 5.4.17
+-- Máquina: 127.3.135.130:3306
+-- Data de Criação: 14-Jul-2015 às 06:50
+-- Versão do servidor: 5.5.41
+-- versão do PHP: 5.3.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -19,16 +19,14 @@ SET time_zone = "+00:00";
 --
 -- Base de Dados: `carettalb`
 --
-CREATE DATABASE IF NOT EXISTS `carettalb` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `carettalb`;
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `accesstoken`
+-- Estrutura da tabela `AccessToken`
 --
 
-CREATE TABLE IF NOT EXISTS `accesstoken` (
+CREATE TABLE IF NOT EXISTS `AccessToken` (
   `id` varchar(255) NOT NULL,
   `ttl` int(11) DEFAULT NULL,
   `created` datetime DEFAULT NULL,
@@ -39,10 +37,10 @@ CREATE TABLE IF NOT EXISTS `accesstoken` (
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `acl`
+-- Estrutura da tabela `ACL`
 --
 
-CREATE TABLE IF NOT EXISTS `acl` (
+CREATE TABLE IF NOT EXISTS `ACL` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `model` varchar(512) DEFAULT NULL,
   `property` varchar(512) DEFAULT NULL,
@@ -56,10 +54,10 @@ CREATE TABLE IF NOT EXISTS `acl` (
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `complaint`
+-- Estrutura da tabela `Complaint`
 --
 
-CREATE TABLE IF NOT EXISTS `complaint` (
+CREATE TABLE IF NOT EXISTS `Complaint` (
   `id` int(11) NOT NULL,
   `comment` varchar(512) DEFAULT NULL,
   `when` datetime NOT NULL,
@@ -74,10 +72,10 @@ CREATE TABLE IF NOT EXISTS `complaint` (
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `nest`
+-- Estrutura da tabela `Nest`
 --
 
-CREATE TABLE IF NOT EXISTS `nest` (
+CREATE TABLE IF NOT EXISTS `Nest` (
   `id` int(11) NOT NULL,
   `comment` varchar(512) DEFAULT NULL,
   `location` point NOT NULL,
@@ -92,10 +90,10 @@ CREATE TABLE IF NOT EXISTS `nest` (
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `role`
+-- Estrutura da tabela `Role`
 --
 
-CREATE TABLE IF NOT EXISTS `role` (
+CREATE TABLE IF NOT EXISTS `Role` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(512) NOT NULL,
   `description` varchar(512) DEFAULT NULL,
@@ -107,10 +105,10 @@ CREATE TABLE IF NOT EXISTS `role` (
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `rolemapping`
+-- Estrutura da tabela `RoleMapping`
 --
 
-CREATE TABLE IF NOT EXISTS `rolemapping` (
+CREATE TABLE IF NOT EXISTS `RoleMapping` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `principalType` varchar(512) DEFAULT NULL,
   `principalId` varchar(512) DEFAULT NULL,
@@ -121,10 +119,10 @@ CREATE TABLE IF NOT EXISTS `rolemapping` (
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `turtle`
+-- Estrutura da tabela `Turtle`
 --
 
-CREATE TABLE IF NOT EXISTS `turtle` (
+CREATE TABLE IF NOT EXISTS `Turtle` (
   `id` int(11) NOT NULL,
   `comment` varchar(512) DEFAULT NULL,
   `when` datetime NOT NULL,
@@ -141,10 +139,10 @@ CREATE TABLE IF NOT EXISTS `turtle` (
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `user`
+-- Estrutura da tabela `User`
 --
 
-CREATE TABLE IF NOT EXISTS `user` (
+CREATE TABLE IF NOT EXISTS `User` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `realm` varchar(512) DEFAULT NULL,
   `username` varchar(512) DEFAULT NULL,
