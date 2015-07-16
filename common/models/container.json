@@ -3,9 +3,7 @@
   "base": "Model",
   "properties": {},
   "validations": [],
-  "relations": {     
-      
-  },
+  "relations": {},
   "acls": [],
   "methods": []
 }

@@ -1,11 +1,11 @@
 {
   "db": {
-    
+    "name": "db"
   },
   "mySQL": {
-    
+    "name": "mySQL"
   },
   "storage": {
-    
+    "name": "storage"
   }
 }

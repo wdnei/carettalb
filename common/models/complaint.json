@@ -21,7 +21,7 @@
     "addAt": {
       "type": "date",
       "required": false,
-      "defaultFn":"now"
+      "defaultFn": "now"
     },
     "location": {
       "type": "geopoint",
@@ -37,13 +37,11 @@
   },
   "validations": [],
   "relations": {
-      "user": {
+    "user": {
       "type": "belongsTo",
       "model": "User",
       "foreignKey": ""
     }
-      
-      
   },
   "acls": [],
   "methods": []

@@ -18,7 +18,7 @@
       "type": "geopoint",
       "required": true
     },
-      "userName": {
+    "userName": {
       "type": "string",
       "required": true
     },
@@ -33,17 +33,16 @@
     "addAt": {
       "type": "date",
       "required": false,
-      "defaultFn":"now"
+      "defaultFn": "now"
     }
   },
   "validations": [],
   "relations": {
-      
-      "user": {
+    "user": {
       "type": "belongsTo",
       "model": "User",
       "foreignKey": ""
-      }
+    }
   },
   "acls": [
     {
